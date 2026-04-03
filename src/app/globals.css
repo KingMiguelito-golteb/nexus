@@ -182,3 +182,19 @@ main {
   outline-offset: 2px;
   border-radius: 4px;
 }
+/* Splash screen loading bar */
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 1.5s ease-in-out forwards;
+}
