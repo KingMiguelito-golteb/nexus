@@ -128,3 +128,57 @@
     @apply font-sans;
   }
 }
+/* Drag and Drop */
+[data-draggable="true"] {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: none;
+}
+
+.kanban-column {
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* Responsive Kanban */
+@media (max-width: 768px) {
+  .kanban-column {
+    flex-direction: column !important;
+  }
+  
+  .kanban-column > div {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Smooth page transitions */
+main {
+  scroll-behavior: smooth;
+}
+
+/* Better scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
